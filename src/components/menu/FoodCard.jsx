@@ -1,4 +1,5 @@
 import "./../../styles/menu.css";
+import { API_URL } from "../../config";
 
 export default function FoodCard({ meal, onAddToCart, onSelect }) {
   return (

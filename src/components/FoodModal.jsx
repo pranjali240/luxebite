@@ -1,4 +1,5 @@
 import "../styles/FoodModal.css";
+import { API_URL } from "../../config";
 
 export default function FoodModal({ meal, onClose, onAdd }) {
   if (!meal) return null;
