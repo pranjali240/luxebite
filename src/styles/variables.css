@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* Colors */
+  --bg: #0b0b0b;
+  --surface: #141414;
+  --surface-light: #1d1d1d;
+
+  --primary: #d4af37;
+  --primary-light: #f4d35e;
+
+  --text: #ffffff;
+  --text-light: #bdbdbd;
+
+  --border: rgba(212, 175, 55, 0.15);
+
+  /* Radius */
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+
+  /* Shadow */
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+
+  --shadow-hover: 0 25px 60px rgba(212, 175, 55, 0.18);
+
+  /* Transition */
+  --transition: all 0.35s ease;
+}

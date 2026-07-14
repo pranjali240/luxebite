@@ -1,0 +1,278 @@
+.food-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  z-index: 999;
+  animation: fadeIn 0.35s ease;
+}
+
+.food-modal {
+  width: 100%;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #141414;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  animation: popup 0.45s ease;
+}
+
+.food-modal img {
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.food-modal:hover img {
+  transform: scale(1.05);
+}
+
+.food-modal-content {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chef-tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.food-modal-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 22px;
+  line-height: 1.2;
+}
+
+.food-modal-content p {
+  color: #bdbdbd;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.food-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 45px 0;
+}
+
+.food-info div {
+  background: #1c1c1c;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+}
+
+.food-info small {
+  display: block;
+  color: #9d9d9d;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.food-info strong {
+  color: #d4af37;
+  font-size: 1.15rem;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.gold-btn,
+.outline-btn {
+  flex: 1;
+  padding: 16px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gold-btn {
+  background: #d4af37;
+  color: #111;
+  border: none;
+  font-weight: 600;
+}
+
+.gold-btn:hover {
+  transform: translateY(-3px);
+  background: #f5c84c;
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.35);
+}
+
+.outline-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.outline-btn:hover {
+  background: #1e1e1e;
+  transform: translateY(-3px);
+}
+
+.cart {
+  background: #181818;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 22px;
+  color: #fff;
+  padding: 30px;
+  width: 700px;
+  max-width: 95%;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.cart-header h2 {
+  margin: 0;
+  color: #d4af37;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+.cart-header span {
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.cart-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart-list::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 10px;
+}
+
+.cart-footer {
+  margin-top: 30px;
+}
+
+.cart-total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  padding: 18px 22px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+}
+
+.cart-total-box span {
+  color: #ccc;
+}
+
+.cart-total-box h3 {
+  margin: 0;
+  color: #d4af37;
+  font-size: 1.8rem;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.empty-cart h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.empty-cart p {
+  color: #999;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .food-modal {
+    grid-template-columns: 1fr;
+  }
+
+  .food-modal img {
+    min-height: 320px;
+  }
+
+  .food-modal-content {
+    padding: 35px;
+  }
+
+  .food-modal-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .food-info {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+  }
+}
