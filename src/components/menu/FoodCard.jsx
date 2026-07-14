@@ -5,7 +5,7 @@ export default function FoodCard({ meal, onAddToCart, onSelect }) {
     <div className="food-card" onClick={() => onSelect(meal)}>
       {" "}
       <div className="food-image">
-        <img src={`${API_URL}/meals/${meal.image}`} alt={meal.name} />
+        <img src={`${API_URL}/${meal.image}`} alt={meal.name} />
 
         {meal.featured && <span className="badge featured">⭐ Featured</span>}
 

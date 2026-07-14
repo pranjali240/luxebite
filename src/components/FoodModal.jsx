@@ -6,7 +6,7 @@ export default function FoodModal({ meal, onClose, onAdd }) {
   return (
     <div className="food-modal-overlay" onClick={onClose}>
       <div className="food-modal" onClick={(e) => e.stopPropagation()}>
-        <img src={`${API_URL}/meals/${meal.image}`} alt={meal.name} />
+        <img src={`${API_URL}/${meal.image}`} alt={meal.name} />
 
         <div className="food-modal-content">
           <span className="chef-tag">Chef's Special</span>
